@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var todoRoutes_1 = require("./../routes/todoRoutes");
 var Routes = /** @class */ (function () {
     function Routes() {
     }
@@ -7,6 +8,7 @@ var Routes = /** @class */ (function () {
         app.get('/', function (req, res) {
             res.status(200).json({ "Success": "Server is running" });
         });
+        app.use('/todo', todoRoutes_1.todoRoutes);
     };
     return Routes;
 }());
